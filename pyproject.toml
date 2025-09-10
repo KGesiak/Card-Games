@@ -1,0 +1,48 @@
+[project]
+name = "Card_Game"
+version = "1.0.0"
+description = "This is a console-based card game simulation that recreates the popular card game Macau (similar to Uno but with a standard deck of cards). The project demonstrates object-oriented programming principles, game logic implementation, and AI development using Python."
+authors = [
+    { name="Karol Gesiak", email="gesiakkarol@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "mypy",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.mypy]
+disable_error_code = ["var-annotated", "union-attr"]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
